@@ -1,0 +1,11 @@
+		<form action="/users/add" method="post">
+			<label for="userName">Login</label><br>
+			<% if (typeof errMess !== 'undefined') { %>
+				<span><%= errMess %></span><br>
+			<% } %>
+			<input type="text" name="userName"
+			<%= (typeof login !== 'undefined') ? `value=${login}`:'' %> /><br><br>
+			<label for="password">Password</label><br>
+			<input type="text" name="password"><br><br>
+			<input type="submit" value="Registrate">
+		</form>	
