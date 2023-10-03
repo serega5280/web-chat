@@ -3,10 +3,12 @@
 			<% if (typeof errMess !== 'undefined') { %>
 				<span><%= errMess %></span><br>
 			<% } %>
-			<%= const validation = (e) => e.target.value = input.replace(/[A-Za-z]/g, '') %>
 			<input type="text" name="userName" onchange={validation}
 			<%= (typeof login !== 'undefined') ? `value=${login}`:'' %> /><br><br>
 			<label for="password">Password</label><br>
 			<input type="text" name="password"><br><br>
 			<input type="submit" value="Registrate">
+			<script>
+				const validation = (e) => e.target.value = input.replace(/[A-Za-z]/g, '')
+			</script>
 		</form>	
