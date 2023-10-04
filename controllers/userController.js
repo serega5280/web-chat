@@ -13,7 +13,6 @@ exports.authorizationPage = function(req, res) {
 exports.addUser = function(req, res) {
   User.findOne({login: req.body.userName}, function(err, doc) {
     if (!doc) {
-      req.body.userName = req.body.userName.replace(/[^a-z]/gi, "")
       let user = new User({login: req.body.userName, password: req.body.password});
       user.save(function (err, docs) {
         if (err) {
