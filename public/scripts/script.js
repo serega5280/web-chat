@@ -1,3 +1,6 @@
+const target = document.querySelector('#login')
+
+const validation = (e) => e.target.value = input.replace(/[A-Za-z]/g, '')
 
 const socket = io();
 
