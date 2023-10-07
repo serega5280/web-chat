@@ -17,7 +17,7 @@ main {
   padding: 20px;
 }
 
-div {
+div.update {
   background-color: #a4e4fd;
   padding: 10px;
 }
